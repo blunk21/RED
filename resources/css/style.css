@@ -74,22 +74,27 @@ h2:after {
     
     
 }
-header h1 {
-    overflow: hidden;
-    animation-duration: 3s;
-    animation-name: slidein;
+
+h3 {
+    color: #fff;
+    font-weight: 100
 }
 
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
+.section-prices h2 {
+    color:  #fff;
+    padding-top: 70px
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------BUTTONS-------------*/
 
@@ -101,12 +106,31 @@ header h1 {
 
 }
 
+.btn-ghost {
+    width: 150px;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-delay: 6.2s;
+    animation-fill-mode: forwards;
+    display: block
+    
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .btn-ghost:link,
 .btn-ghost:visited {
     background: transparent;
     color: #1750d1;
     transition: background 1s;
-    
 }
 
 .btn-ghost:hover,
@@ -167,15 +191,72 @@ header h1 {
 }
 
 .hero-text-box a {
-    position: absolute;
-    transform: translateX(300%) translateY(35px);
     text-decoration: none;
     font-size: 110%;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 10px 8px 15px;
     
     
+}
+
+.hero-features {
+    overflow: hidden;
+    
+}
+
+.hero-features li {
+    line-height: 5%;
+    display: inline-block;
+
     
     
+}
+.hero-features li:last-child {
+    margin-bottom: 50px;
+}
+
+
+.hero-features li {
+    animation-name: slidein;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+.hero-features li:nth-of-type(1) {
+    animation-delay: 0s;
+
+}
+.hero-features li:nth-of-type(2) {
+    animation-delay: 1.3s;
+    
+}
+.hero-features li:nth-of-type(3) {
+    animation-delay: 2.8s;
+    
+}
+.hero-features li:nth-of-type(4) {
+    animation-delay: 4.3s;
+    
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 300%;
+        opacity: 1;
+        
+    }
+    
+    75% {
+        font-size: 200%;
+        margin-left: 25%;
+        width: 150%;
+        margin-bottom: -50px;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 /*-----------------------------------------*/
@@ -185,6 +266,7 @@ header h1 {
 
 .section-about {
     background: #f5f5f5;
+    
 }
 .about-us {
     padding-top: 60px;
@@ -196,7 +278,7 @@ header h1 {
     line-height: 140%;
     font-weight: 100;
     width: 70%;
-    margin
+
 }
 blockquote:before {
     display: block;
@@ -210,9 +292,10 @@ blockquote:before {
 
 
 cite {
-    display: block;
+    display: inline-block;
     font-size: 120%;
     padding-top: 20px;
+    padding-bottom: 70px;
 }
 
 cite img {
@@ -230,5 +313,84 @@ blockquote {
 /*-----------------------------------------*/
 /* ÁRAK */
 /*-----------------------------------------*/
+
+
+.section-prices {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.72),rgba(0, 0, 0, 0.71)),url(img/bar_background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+        
+}
+
+.box {
+    text-align: center;
+    height: 245px;
+    
+}
+
+
+
+
+#beer {
+    position: relative;
+    transform: translate(-60px,0) rotate(0deg);
+    transition:transform 1.5s ;
+    
+    
+}
+
+.beer-box img {
+    transform: translate(0px,0px) rotate(0deg);
+    transition: transform 1.5s;
+    
+}
+
+.beer-box:hover img {
+    transform: translate(100px,-270px) rotate(-125deg);
+    transition: transform 1.5s;
+}
+
+
+#wine {
+    position: relative;
+    transform: translateX(-40px)
+}
+
+.wine-box img {
+    transform: translate(0px,0px) rotate(0deg);
+    transition: transform 1.5s;
+    
+}
+.wine-box:hover img {
+    transform: translate(100px,-250px) rotate(-125deg);
+    transition: transform 1.5s;
+}
+
+#tea {
+    position: relative;
+    transform: translateX(-140px)
+}
+
+
+.tea-box img {
+    transition: transform 1.5s;
+}
+.tea-box:hover img {
+    transform: translate(300px);
+    transition: transform 1.5s;
+}
+
+.drinks img {
+    height: 250px;
+    margin-top: 20px;
+    position: absolute;
+
+}
+
+
+
+
 
 
