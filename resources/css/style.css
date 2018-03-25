@@ -77,7 +77,8 @@ h2:after {
 
 h3 {
     color: #fff;
-    font-weight: 100
+    font-weight: 600;
+    font-size: 200%;
 }
 
 .section-prices h2 {
@@ -326,7 +327,7 @@ blockquote {
 
 .box {
     text-align: center;
-    height: 245px;
+    height: 350px;
     
 }
 
@@ -348,7 +349,7 @@ blockquote {
 }
 
 .beer-box:hover img {
-    transform: translate(100px,-270px) rotate(-125deg);
+    transform: translate(100px,-300px) rotate(-125deg);
     transition: transform 1.5s;
 }
 
@@ -364,13 +365,13 @@ blockquote {
     
 }
 .wine-box:hover img {
-    transform: translate(100px,-250px) rotate(-125deg);
+    transform: translate(100px,-270px) rotate(-125deg);
     transition: transform 1.5s;
 }
 
 #tea {
     position: relative;
-    transform: translateX(-140px)
+    transform: translateX(-170px)
 }
 
 
@@ -390,7 +391,11 @@ blockquote {
 }
 
 
+/*-----PRICE TABLE-----*/
 
-
+.price-box {
+    color: #fff;
+    font-family: 'Bree Serif' , sans-serif;
+}
 
 
