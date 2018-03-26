@@ -23,7 +23,7 @@ html {
 }
 
 .row {
-    max-width:1140px;
+    width:1140px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
@@ -320,7 +320,7 @@ blockquote {
     background-image:linear-gradient(rgba(0, 0, 0, 0.72),rgba(0, 0, 0, 0.71)),url(img/bar_background.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100%;
     background-attachment: fixed;
         
 }
@@ -328,8 +328,9 @@ blockquote {
 .box {
     text-align: center;
     height: 350px;
-    
 }
+
+
 
 
 
@@ -353,10 +354,35 @@ blockquote {
     transition: transform 1.5s;
 }
 
+#whiskey img {
+    height: 300px;
+}
+
+#whiskey {
+    position: relative;
+    transform: translate(-156px) rotate(0deg);
+    transition: transform 1.5s;
+}
+
+.whiskey-box img {
+    transform: translate(0px,0px) rotate(0deg);
+    transition: transform 1.5s;
+    
+}
+
+.whiskey-box:hover img {
+    transform: translate(120px,-310px) rotate(-125deg);
+    transition: transform 1.5s;
+}
+
 
 #wine {
     position: relative;
-    transform: translateX(-40px)
+    transform: translate(-165px,-38px);
+}
+
+#wine img {
+    height: 320px;
 }
 
 .wine-box img {
@@ -365,37 +391,172 @@ blockquote {
     
 }
 .wine-box:hover img {
-    transform: translate(100px,-270px) rotate(-125deg);
+    transform: translate(100px,-280px) rotate(-125deg);
     transition: transform 1.5s;
 }
+
+
+#palinka img {
+    height: 300px;
+}
+
+#palinka {
+    position: relative;
+    transform: translate(-50px) rotate(0deg);
+}
+
+.palinka-box img {
+    transform: translate(0px,0px) rotate(0deg);
+    transition: transform 1.5s;
+    
+}
+
+.palinka-box:hover img {
+    transform: translate(100px,-320px) rotate(-125deg);
+    transition: transform 1.5s;
+}
+
+#vodka img {
+    height: 309px;
+}
+
+#vodka {
+    position: relative;
+    transform: translate(-150px, -8px) rotate(0deg);
+}
+
+.vodka-box img {
+    transform: translate(0px,0px) rotate(0deg);
+    transition: transform 1.5s;
+}
+
+.vodka-box:hover img {
+    transform: translate(100px,-310px) rotate(-125deg);
+    transition: transform 1.5s;
+    
+}
+
 
 #tea {
     position: relative;
-    transform: translateX(-170px)
+    transform: translateX(-170px);
+    
 }
-
 
 .tea-box img {
     transition: transform 1.5s;
+    overflow: hidden;
 }
 .tea-box:hover img {
     transform: translate(300px);
     transition: transform 1.5s;
+    
 }
 
 .drinks img {
     height: 250px;
     margin-top: 20px;
     position: absolute;
+    overflow: hidden;
 
 }
 
 
-/*-----PRICE TABLE-----*/
+
+.drinks-row, .second-drinks-row {
+    width: 70%;
+}
+
+.second-drinks-row {
+    margin-top: 100px;
+}
 
 .price-box {
     color: #fff;
     font-family: 'Bree Serif' , sans-serif;
+    line-height: 30px
+    
+}
+
+.price-text {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+
+.price-box ul {
+    padding-top: 10px;
 }
 
 
+.beer-price-container,
+.wine-price-container,
+.tea-price-container,
+.whiskey-price-container,
+.palinka-price-container,
+.vodka-price-container{
+    margin-top: 20px;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    opacity: 0;
+    transition: opacity 0.7s;
+   /* border: 3px dashed #fff; */                       /*<------ÁRTÁBLA KERET*/
+    position: absolute;
+}
+
+.beer-price-container {
+    transform: translateX(-45px);
+}
+
+
+
+.beer-price-container:hover,
+.wine-price-container:hover,
+.tea-price-container:hover,
+.whiskey-price-container:hover,
+.palinka-price-container:hover,
+.vodka-price-container:hover {
+    opacity: 1;
+    transition: opacity 1.5s;
+    text-overflow: inherit;
+}
+
+.beers,
+.wines,
+.whiskey,
+.palinka,
+.vodka {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.wine-price-container {
+    transform: translateX(-40px)
+}
+
+
+.tea-price-container {
+    transform: translateX(-50px)
+}
+
+.whiskey-price-container {
+    transform: translateX(-50px);
+}
+
+.palinka-price-container { 
+    transform: translateX(-55px)
+}
+
+.vodka-price-container {
+    transform: translateX(-50px);
+}
+
+.teas {
+    text-align: left;
+    margin-top: 30px;
+}
+
+/*----------------------*/
